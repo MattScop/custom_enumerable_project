@@ -1,5 +1,14 @@
 module Enumerable
   # Your code goes here
+  def my_any?
+    i = 0
+    while i < self.my_count
+      return true if yield(self[i])
+      i += 1
+    end
+    false
+  end
+
   def my_count(&block)
     return self.length unless block_given?
     
