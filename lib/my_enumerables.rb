@@ -1,5 +1,15 @@
 module Enumerable
   # Your code goes here
+  def my_select
+    i = 0
+    new_array = []
+    while i < self.length
+      new_array.push(self[i]) if yield(self[i])
+      i += 1
+    end
+    new_array
+  end
+  
   def my_map
     new_array = []
     i = 0
