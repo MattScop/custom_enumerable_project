@@ -1,5 +1,14 @@
 module Enumerable
   # Your code goes here
+  def my_all?
+    i = 0
+    while i < self.my_count
+      return false unless yield(self[i])
+      i += 1
+    end
+    true
+  end
+
   def my_any?
     i = 0
     while i < self.my_count
