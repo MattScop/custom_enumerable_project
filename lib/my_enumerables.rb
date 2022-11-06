@@ -2,7 +2,7 @@ module Enumerable
   # Your code goes here
   def my_each_with_index
     i = 0
-    while i < self.count
+    while i < self.length
       yield(self[i], i)
       i += 1
     end
@@ -18,7 +18,7 @@ class Array
   # Define my_each here
   def my_each
     i = 0
-    while i < self.count
+    while i < self.length
       yield self[i]
       i += 1
     end
