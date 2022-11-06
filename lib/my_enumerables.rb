@@ -1,5 +1,15 @@
 module Enumerable
   # Your code goes here
+  def my_map
+    new_array = []
+    i = 0
+    while i < self.my_count
+      new_array << yield(self[i])
+      i += 1
+    end
+    new_array
+  end
+
   def my_all?
     i = 0
     while i < self.my_count
