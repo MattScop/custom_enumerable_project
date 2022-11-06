@@ -1,5 +1,17 @@
 module Enumerable
   # Your code goes here
+  def my_count(&block)
+    return self.length unless block_given?
+    
+    i = 0
+    counter = 0
+    while i < self.length
+      counter += 1 if block.call(self[i])
+      i += 1
+    end
+    counter
+  end
+
   def my_each_with_index
     i = 0
     while i < self.length
