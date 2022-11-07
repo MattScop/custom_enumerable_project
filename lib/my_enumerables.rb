@@ -1,5 +1,14 @@
 module Enumerable
   # Your code goes here
+  def my_inject(accumulator)
+    i = 0
+    while i < self.length
+      accumulator = yield(accumulator, self[i])
+      i += 1
+    end
+    accumulator
+  end
+  
   def my_none?
     i = 0
     while i < self.length
