@@ -1,5 +1,14 @@
 module Enumerable
   # Your code goes here
+  def my_none?
+    i = 0
+    while i < self.length
+      return false if yield(self[i])
+      i += 1
+    end
+    true
+  end
+
   def my_select
     i = 0
     new_array = []
